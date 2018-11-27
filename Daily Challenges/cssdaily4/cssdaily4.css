@@ -1,0 +1,25 @@
+/*CSS Daily Challenge 2,1,4,3,5*/
+
+div 
+    display: flex;
+ 
+
+.one 
+    order: 2;
+ 
+
+.two 
+    order: 1;
+ 
+
+.three 
+    order: 4;
+ 
+
+.four 
+    order: 3;
+ 
+
+.five 
+    order: 5;
+ 

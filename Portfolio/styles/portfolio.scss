@@ -1,0 +1,18 @@
+@import './partials/fonts'; // Portfolio Fonts
+@import './partials/vars';  // Variable Shortcuts
+@import './partials/reset'; // CSS Reset
+
+@import './partials/constants.scss'; // Header & Footer
+
+@import './partials/index'; // Index styling
+
+@import './partials/bio'; // Biography Page styling
+
+@import './partials/resPage'; // Resumé Page styling
+
+@import './partials/projects'; // Projects Page styling
+    @import './partials/htmlChal.scss'; // HTML Challenges styling
+    @import './partials/cssChal.scss'; // CSS Challenges styling
+    @import './partials/apiChal.scss'; // API Challenges styling
+
+@import './partials/contact'; // Contacts Page styling

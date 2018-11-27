@@ -1,0 +1,85 @@
+body {
+    background-image: url("../../img/background_img.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    .hero--background{
+        // background-color: white;
+        background-image: url("../../img/hero.jpg");
+        background-repeat: no-repeat;
+        background-color: white;
+        width: 1200px;
+        height: 2860px;
+        margin: 170px auto;
+        // align-content: center;
+        // .hero--image{
+        // }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: auto;
+            margin: 55px 78px 124px 80px;
+            .hamburger{
+                width: 24px;
+                height: 22px;
+            }
+            .logo{
+                align-items: center;
+            }
+            .nav__search{
+                display: flex;
+                align-items: flex-start;
+                p{
+                    padding-right: 12px;
+                }
+            }
+        }
+        .cards{
+            display: flex;
+            // width: 1200px;
+            justify-content: space-between;
+            .cards--left{
+                background-color: red;
+                justify-content: left;
+                align-content: flex-start;
+                margin-left: 72px;
+                h1{
+                    background-color:red;
+                    height: 192px;
+                    font-family: 'DBeyond';
+                }
+            }
+            .cards--right{
+                background-color: blue;
+                align-content: flex-end;
+                .card--luxembourg{
+                    border: 20px solid white;
+                    background-image: url('../../img/cardsRight/luxembourg.jpg');
+                    background-size: cover;
+                }
+            }
+        }
+        .page--blocks{
+            display: flex;
+            justify-content: center;
+            .block1, .block2, .block3{
+                width: 18px;
+                height: 18px;
+                border: 2px solid #A5ACAB;
+            }
+            .block3{
+                border: 2px solid black;
+            }
+        }
+        footer{
+            border-top: 2px solid #979797;
+            background-color: white;
+            .footer--links{
+                display: flex;
+            }
+        }
+    }
+}

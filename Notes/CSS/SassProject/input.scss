@@ -1,0 +1,25 @@
+/* SASS Input */
+
+h1 {
+    background-color: yellow;
+    color: red;
+}
+
+@mixin padding($direction, $value) {
+    padding-#{$direction}: $value;
+}
+
+@mixin mq($breakpoint) {
+    @content;
+}
+
+p {
+    @include padding(top, 20px);
+}
+
+body {
+    background: yellow;
+    @media (max-width: 400px) {
+        background: teal;
+    }
+}

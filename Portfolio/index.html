@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DomDuliepre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" type="ddLogo/png" href="./Images/ddLogo.png" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./styles/portfolio.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar--desktop">
+                <i class="fas fa-bars"></i>
+                <div class="nav__left">
+                    <a href="index.html"><img src="./Images/ddLogo.png" alt="Logo"></a>
+                    <div class="nav__left--name">
+                        <p class="first"><a href="index.html">OMINICK</a></p>
+                        <p class="last"><a href="index.html">ULIEPRE</a></p>
+                    </div>
+                </div>                
+                <ul>
+                    <li><a href="index.html" class="navLinks" id="selected">Home</a></li>
+                    <li><a href="biography.html" class="navLinks">Biography</a></li>
+                    <li><a href="resume.html" class="navLinks">Resumé</a></li>
+                    <li class="dropdown"><a href="projects.html" class="navLinks">Projects</a>
+                        <ul class="dropdown--list dropdown--offPage">
+                            <a href="htmlChal.html"><div class="dropdown--list__item">
+                                <li>HTML Challenges</li>
+                            </div></a>
+                            <a href="cssChal.html"><div class="dropdown--list__item">
+                                <li>CSS Challenges</li>
+                            </div></a>
+                            <a href="apiChal.html"><div class="dropdown--list__item">
+                                <li>AJAX API Challenges</li>
+                            </div></a>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="navLinks">Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav class="navbar--mobile">
+                <i class="fas fa-bars" id="navBtn"></i>
+                <div class="nav__left">
+                    <a href="index.html"><img src="./Images/ddLogo.png" alt="Logo"></a>
+                    <div class="nav__left--name">
+                        <p><a href="index.html">OMINICK</a></p>
+                        <p><a href="index.html">ULIEPRE</a></p>
+                    </div>
+                </div>
+                <div class="modalDiv" id="modal">           
+                    <ul class="modal--content">
+                        <span class="close">&times;</span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="biography.html">Biography</a></li>
+                        <li><a href="resume.html">Resumé</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section class="home">
+                <h1>Dominick Duliepre</h1>
+            </section>
+            <div class="home__para">
+                <p class="para--left">Road to Hire has been a complete blessing towards my life. This non-profit organization focuses on the development of young, hard-working adults in either leadership/sales and technology. I decided to go through with what I felt was a right fit for me in technology. The program really is investing into my own future and well-being. I completely believe in what Road to Hire is doing for the millennium.</p>
+                <p class="para--right">Road to Hire first came into my life through my mom who heard it on the radio. This ultimately became my plan for after high school graduation. Throughout my last year in high school, I joined the Road to Hire team for a tour of their workspace. After about seven times on the RedVentures campus, I finally went to an Open House for the opportunity to be in the program. I had received word days later that I was to be accepted into the curriculum. And after six grueling weeks of hard work in the Gateway Program, I am continuing my education in the official Road to Hire Program.</p>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer_copy">
+                <p><small>&copy; Copyright. Information on this site is for educational purposes only.</small></p>
+            </div>
+            <div class="footer__images">
+                <a target="_ " href="https://www.instagram.com/nicky_dominick/"><img src="Images/Instagram.png" alt="instagram" class="footer"></a>
+                <a target="_ " href="https://www.linkedin.com/in/dominick-duliepre-06b028168/"><img src="Images/LinkedIn.png" alt="LinkedIn" class="footer"></a>
+                <a target="_ " href="http://road2hire.org/"><img src="Images/R2H.jpg" alt="road2hire" class="footer"></a>
+            </div>
+        </footer>
+
+        <script src="form.js"></script>
+    </body>
+</html>

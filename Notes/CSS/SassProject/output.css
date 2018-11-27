@@ -1,0 +1,20 @@
+/* SASS Input */
+h1 {
+  background-color: yellow;
+  color: red;
+}
+
+p {
+  padding-top: 20px;
+}
+
+body {
+  background: yellow;
+}
+@media (max-width: 400px) {
+  body {
+    background: teal;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

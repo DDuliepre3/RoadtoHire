@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Easy AJAX</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+
+    <body>
+        <h1>Json</h1>
+        <ul class="output"></ul>
+        <button class="trigger">Who's in Space??</button>
+        <script>
+            // EASY: Using jQuery's AJAX functions, create a page that will display the names of the people currently in space,
+            // as well as what spacecraft they are currently on. API Documentation: http://open-notify.org/
+
+            var joker = document.querySelector('.trigger');
+            joker.addEventListener('click', showPeeps);
+
+            function showPeeps() {
+                var ajax = new XMLHttpRequest();
+
+                ajax.onreadystatechange = function () {
+                    if (this.readyState == 4) {
+                        if (this.status == 200) {
+                            var json = JSON.parse(this.responseText);
+                            // console.log(json);
+                            for (i = 0; i < json.people.length; i++) {
+                                var html = document.querySelector(".output");
+
+                                document.querySelector('.output').innerHTML += `<li>${json.people[i].name} is traveling on the ${json.people[i].craft} spacecraft.</li>`;
+                                console.log(json.people[i].name + json.people[i].craft);
+                            }
+                        }
+                    }
+                }
+                ajax.open('GET', 'http://api.open-notify.org/astros.json', true);
+                ajax.send();
+            }
+        </script>
+    </body>
+
+</html>

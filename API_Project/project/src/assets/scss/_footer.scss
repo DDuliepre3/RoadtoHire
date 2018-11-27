@@ -1,0 +1,96 @@
+.footer--bottom{
+    min-width: 100%;
+    background-color: $gamerBlack;
+    color: $gamerGrey; 
+    display: flex;
+    align-content: baseline;
+    justify-content: center;
+    .footer--card{
+        padding: 2rem;
+        max-width: 25%;
+        text-align: left;
+        margin: 0 2rem;
+        .footer__img{
+            text-align: center;
+        }
+        h2{
+            font-family: $navFont;
+            color: $gamerYellow;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        p{
+            font-family: $paraText;
+            font-weight: bold;
+        }
+        img{
+            height: 30px;
+            padding: 0 10px;
+        }
+        form{
+            .footer__search--text{
+                height: 20px;
+                background-color: $gamerSilver;
+                width: 290px;
+            }
+            .footer__search--button{
+                height: 20px;
+                background-color: $gamerBlue;
+                color: white;
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+@media(max-width: 786px){
+    .footer--bottom{
+        width: 100%;
+        background-color: $gamerSilver;
+        color: $gamerBlack; 
+        display: flex;
+        align-content: baseline;
+        justify-content: center;
+        .footer--card{
+            padding: 2rem;
+            max-width: 25%;
+            text-align: left;
+            margin: 0;
+            .footer__img{
+                text-align: center;
+            }
+            h2{
+                font-family: $navFont;
+                color: $gamerBurn;
+                text-align: center;
+                // margin-bottom: 1rem;
+            }
+            p{
+                font-family: $paraText;
+                padding: .5rem 0;
+                .footer__info{
+                    padding: none;
+                    width: 25%;
+                    font-size: .5rem;
+                }
+            }
+            img{
+                height: 30px;
+                padding: 0 5px;
+            }
+            form{
+                .footer__search--text{
+                    height: 20px;
+                    border: 3px solid $gamerBurn;
+                    // background-color: $gamerGrey;
+                    width: 120px;
+                }
+                .footer__search--button{
+                    height: 20px;
+                    background-color: $gamerBlue;
+                    color: white;
+                }
+            }
+        }
+    }
+}

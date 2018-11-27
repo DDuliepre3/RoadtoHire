@@ -1,0 +1,1532 @@
+@import url("https://fonts.googleapis.com/css?family=Fredericka+the+Great");
+@import url("https://fonts.googleapis.com/css?family=Chonburi");
+@import url("https://fonts.googleapis.com/css?family=Alegreya+SC");
+@import url("https://fonts.googleapis.com/css?family=Eczar");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC|Sahitya");
+@import url("https://fonts.googleapis.com/css?family=Faster+One");
+@import url("https://fonts.googleapis.com/css?family=Work+Sans");
+@import url("https://fonts.googleapis.com/css?family=Josefin+Sans");
+/**********
+CSS RESET
+**********/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@-webkit-keyframes colorChange {
+  from {
+    background-color: #353535;
+  }
+  to {
+    background-color: #00778B;
+  }
+}
+
+@keyframes colorChange {
+  from {
+    background-color: #353535;
+  }
+  to {
+    background-color: #00778B;
+  }
+}
+
+@-webkit-keyframes logoSpin {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+  }
+}
+
+@keyframes logoSpin {
+  from {
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(-360deg);
+            transform: rotateY(-360deg);
+  }
+}
+
+@-webkit-keyframes textBold {
+  from {
+    font-weight: 100;
+  }
+  to {
+    font-weight: 900;
+  }
+}
+
+@keyframes textBold {
+  from {
+    font-weight: 100;
+  }
+  to {
+    font-weight: 900;
+  }
+}
+
+body header {
+  background-color: #353535;
+  top: 0;
+  left: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100%;
+  z-index: 1;
+}
+
+body header nav {
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body header nav .fas {
+  display: none;
+}
+
+body header nav .nav__left {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body header nav .nav__left img {
+  height: 4.5rem;
+  padding: 1rem;
+}
+
+body header nav .nav__left img:hover {
+  -webkit-animation: logoSpin 1.7s linear infinite;
+          animation: logoSpin 1.7s linear infinite;
+}
+
+body header nav .nav__left div {
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+body header nav .nav__left div a {
+  color: #DF0B25;
+  font-family: "Playfair Display SC";
+  font-size: 20px;
+  text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-items: center;
+}
+
+body header nav .nav__left div:hover {
+  -webkit-animation: textBold .1s linear both;
+          animation: textBold .1s linear both;
+  -webkit-transform: scale(1.3) skewX(-10deg);
+          transform: scale(1.3) skewX(-10deg);
+}
+
+body header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header nav ul li {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+body header nav ul li .navLinks {
+  font-size: 24px;
+  font-variant: small-caps;
+  background-color: #353535;
+  padding: 2.1rem 2rem;
+  text-decoration: none;
+  color: white;
+  font-family: "Fredericka the Great";
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+body header nav ul li .navLinks:hover {
+  -webkit-animation: colorChange .8s ease-out forwards;
+          animation: colorChange .8s ease-out forwards;
+  -ms-flex-item-align: auto;
+      -ms-grid-row-align: auto;
+      align-self: auto;
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
+body header nav ul .dropdown {
+  position: relative;
+}
+
+body header nav ul .dropdown:hover ul {
+  display: block;
+}
+
+body header nav ul .dropdown ul {
+  display: none;
+  color: white;
+  position: absolute;
+  top: 80px;
+  width: 80%;
+  height: 50%;
+  margin-left: 5%;
+}
+
+body header nav ul .dropdown .dropdown--list {
+  width: 100%;
+  margin-left: 0;
+  text-align: center;
+}
+
+body header nav ul .dropdown .dropdown--list a {
+  text-decoration: none;
+}
+
+body header nav ul .dropdown .dropdown--list__item {
+  background-color: black;
+  color: white;
+}
+
+body header nav ul .dropdown .dropdown--list__item li {
+  padding: 1rem;
+  text-decoration: none;
+  font-variant: small-caps;
+}
+
+body header nav ul .dropdown .dropdown--list__item:hover {
+  background-color: #00778B;
+}
+
+body header nav ul .dropdown .dropdown--list #selectedDrop {
+  background-color: #00778B;
+  border-left: 5px solid #DF0B25;
+}
+
+body header nav ul .dropdown .dropdown--offPage {
+  width: 90%;
+  margin-left: 5%;
+}
+
+body header nav ul #selected {
+  background-color: #280071;
+  color: #ffffff;
+  overflow: visible;
+}
+
+body header nav ul #selected:hover {
+  -webkit-animation: none;
+          animation: none;
+  -webkit-transform: none;
+          transform: none;
+}
+
+body header .navbar--mobile {
+  display: none;
+}
+
+body main {
+  min-height: 100%;
+}
+
+body footer {
+  position: relative;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding-top: 1rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body footer p {
+  font-family: "Eczar";
+}
+
+body footer .footer__images {
+  -ms-flex-line-pack: center;
+      align-content: center;
+  margin: 1rem auto;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body footer .footer__images a img {
+  width: 35px;
+  height: 35px;
+}
+
+@media screen and (max-width: 1000px) {
+  body header .navbar--desktop {
+    display: none;
+  }
+  body header .navbar--mobile {
+    width: 55%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  body header .navbar--mobile i {
+    color: #DF0B25;
+    -webkit-transform: scale(2);
+            transform: scale(2);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: 2rem;
+  }
+  body header .navbar--mobile .nav__left .nav__left--name {
+    display: none;
+  }
+  body header .navbar--mobile .nav__left img {
+    height: 3rem;
+    padding: 1rem 0;
+    margin-left: -3rem;
+  }
+  body header .navbar--mobile .fas {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body header .navbar--mobile .modalDiv {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: black;
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+    display: none;
+  }
+  body header .navbar--mobile .modalDiv .modal--content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  body header .navbar--mobile .modalDiv .modal--content .close {
+    color: white;
+    text-align: right;
+    width: 80%;
+    margin: 0 10%;
+    font-size: 38px;
+    margin-top: -2.5rem;
+  }
+  body header .navbar--mobile .modalDiv .modal--content a {
+    text-decoration: none;
+    color: white;
+    font-family: "Josefin Sans";
+    line-height: 2rem;
+    font-size: 24px;
+  }
+  body header .navbar--mobile .modalDiv .modal--content li {
+    padding: .5rem;
+  }
+  body footer .footer__images {
+    min-width: 30%;
+  }
+}
+
+.home {
+  margin: 2rem auto;
+  background-image: url("../Images/hero.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+}
+
+.home h1 {
+  font-size: 5rem;
+  font-family: "Faster One";
+  text-align: center;
+  padding-top: 2rem;
+  background: -webkit-linear-gradient(#280071, #00778B);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home__para {
+  width: 90%;
+  margin-bottom: 1rem;
+  background-color: #00778B;
+  font-family: "Alegreya SC";
+  font-size: 1.5rem;
+  color: white;
+  padding: 2.5% 5%;
+  line-height: initial;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.home__para p {
+  max-width: 40%;
+}
+
+.home__para .para--left {
+  text-align: right;
+}
+
+.home__para .para--right {
+  text-align: left;
+}
+
+@media screen and (max-width: 1000px) {
+  .home h1 {
+    font-size: 4rem;
+    font-family: "Faster One";
+    text-align: center;
+    padding-top: 2rem;
+    background: -webkit-linear-gradient(#280071, #00778B);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .home__para {
+    background-color: #00778B;
+    text-align: center;
+    font-family: "Alegreya SC";
+    font-size: 1.3rem;
+    color: white;
+    padding: 2.5% 5%;
+    line-height: initial;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .home__para .para--left, .home__para .para--right {
+    min-width: 100%;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+}
+
+@-webkit-keyframes textChangeRed {
+  from {
+    color: white;
+  }
+  to {
+    color: #DF0B25;
+  }
+}
+
+@keyframes textChangeRed {
+  from {
+    color: white;
+  }
+  to {
+    color: #DF0B25;
+  }
+}
+
+.biography--page {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.biography--page .info {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  width: 40%;
+  margin: 2.5% 5% 5% 2.5%;
+  font-family: "Alegreya SC";
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 900;
+  padding-top: 1.5rem;
+}
+
+.biography--page .photo {
+  padding: 2rem 1rem 1rem 1rem;
+  background-color: #353535;
+  border: 1px solid #353535;
+  -webkit-box-shadow: 5px 10px 10px #A1A1A4;
+          box-shadow: 5px 10px 10px #A1A1A4;
+  width: 40%;
+  margin: 2.5% 2.5% 2.5% 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.biography--page .photo img {
+  width: 90%;
+  border: 5px solid white;
+}
+
+.biography--page .photo .photo--info {
+  padding-top: 1rem;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.biography--page .photo .photo--info .info__job {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1rem 0 2rem 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.biography--page .photo .photo--info .info__job .line {
+  border: 1px solid white;
+  background-color: white;
+  height: 2px;
+  width: 15%;
+}
+
+.biography--page .photo .photo--info .info__job a {
+  text-decoration: none;
+}
+
+.biography--page .photo .photo--info .info__job h2 {
+  font-family: "Fredericka the Great";
+  font-size: 30px;
+  font-variant: small-caps;
+  color: white;
+  text-align: center;
+  -webkit-transition: all .1s linear;
+  transition: all .1s linear;
+}
+
+.biography--page .photo .photo--info .info__job h2:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-animation: textChangeRed .1s ease-out forwards;
+          animation: textChangeRed .1s ease-out forwards;
+}
+
+.biography--page .photo .photo--info .info__background {
+  text-align: center;
+}
+
+.biography--page .photo .photo--info .info__background h3 {
+  color: white;
+  font-family: "Eczar";
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+@media screen and (max-width: 1000px) {
+  .biography--page {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .biography--page .info {
+    width: 85%;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+  }
+  .biography--page .photo {
+    width: 80%;
+    margin: 2rem 0 0 0;
+  }
+  .biography--page .photo .photo--info .info__job h2 {
+    font-size: 20px;
+  }
+}
+
+.resPage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  padding: 2rem;
+  font-family: "Work Sans";
+}
+
+.resPage .asideRes {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 15%;
+  width: 40%;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  background-color: #353535;
+  -webkit-box-shadow: 5px 10px 25px #353535;
+          box-shadow: 5px 10px 25px #353535;
+  height: 80%;
+}
+
+.resPage .asideRes .asideRes--card {
+  margin: 2rem auto;
+  width: 80%;
+  text-align: center;
+  color: white;
+}
+
+.resPage .asideRes .asideRes--card img {
+  width: 100%;
+  border: 5px solid white;
+}
+
+.resPage .asideRes .asideRes--card h1 {
+  font-size: 2.7rem;
+  margin: 1rem;
+}
+
+.resPage .asideRes .asideRes--card address {
+  font-style: italic;
+  margin: 1rem;
+}
+
+.resPage .asideRes .asideRes--card a {
+  color: white;
+  text-decoration: none;
+}
+
+.resPage .asideRes .asideRes--card a:hover {
+  color: #DF0B25;
+  text-decoration: underline;
+}
+
+.resPage .mainRes {
+  width: 50%;
+}
+
+.resPage .mainRes section {
+  margin-bottom: 2rem;
+}
+
+.resPage .mainRes section h2 {
+  font-variant: small-caps;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #00778B;
+  padding: 1rem;
+  color: white;
+  font-family: "Playfair Display SC";
+  margin-bottom: 1rem;
+}
+
+.resPage .mainRes section .dateOf--h3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 20px;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.resPage .mainRes section .dateOf--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.resPage .mainRes section .achieve--list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.resPage .mainRes section .achieve--list li {
+  width: 40%;
+  padding: .5rem 0;
+}
+
+.resPage .mainRes section .jobSection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-bottom: .5rem;
+}
+
+.resPage .mainRes section .jobSection .job--title {
+  text-transform: uppercase;
+}
+
+.resPage .mainRes section .jobSection .resLine {
+  margin: 0 0 0 2%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  width: 100%;
+  height: 3px;
+  background-color: #353535;
+}
+
+.resPage .mainRes section .harrisTeeter {
+  margin-top: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .resPage {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .resPage .asideRes {
+    width: 100%;
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .resPage .mainRes {
+    width: 100%;
+  }
+  .resPage .mainRes section {
+    margin-bottom: 0;
+  }
+  .resPage .mainRes .dateOf--h3 {
+    width: 100%;
+  }
+  .resPage .mainRes .dateOf--h3 p {
+    width: 50%;
+    font-size: 1.2rem;
+    text-align: right;
+  }
+  .resPage .mainRes .dateOf--list {
+    width: 100%;
+  }
+  .resPage .mainRes .dateOf--list .item--expDate {
+    width: 50%;
+    text-align: right;
+  }
+  .resPage .mainRes .harrisTeeter, .resPage .mainRes .edu--list {
+    margin-bottom: 1rem;
+  }
+}
+
+.projectsPage h1 {
+  color: #353535;
+  font-family: "Josefin Sans";
+  font-size: 60px;
+  margin: 2rem 0 0 0;
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  font-variant: small-caps;
+}
+
+.projectsPage p {
+  width: 100%;
+  text-align: center;
+  font-family: "Alegreya SC";
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.projectsPage .allChallenges {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.projectsPage .allChallenges a {
+  height: 200px;
+  width: 30%;
+  padding: 1rem;
+  border: 6px solid #00778B;
+  text-decoration: none;
+  margin: 2rem 1rem;
+}
+
+.projectsPage .allChallenges .htmlChal {
+  height: 100%;
+  background-image: url("../Images/mediumHTML.png");
+  background-size: cover;
+}
+
+.projectsPage .allChallenges .cssChal {
+  height: 100%;
+  background-image: url("../Images/CssDaily5.png");
+  background-size: cover;
+  background-position: top;
+}
+
+.projectsPage .allChallenges .apiChal {
+  height: 100%;
+  background-image: url("../Images/AJAX_API.png");
+  background-size: cover;
+}
+
+.projectsPage .allChallenges .midTermSketch {
+  height: 100%;
+  background-image: url("../Images/MidTermReplica.png");
+  background-size: cover;
+}
+
+.projectsPage .allChallenges .chal--text {
+  height: 100%;
+}
+
+.projectsPage .allChallenges .chal--text h2 {
+  display: none;
+  font-family: "Chonburi";
+  font-size: 20px;
+  padding: 2rem 0;
+  color: #00778B;
+}
+
+.projectsPage .allChallenges .chal--text p {
+  display: none;
+  font-family: "Playfair Display SC";
+  color: white;
+}
+
+.projectsPage .allChallenges .chal--text:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+  display: block;
+}
+
+.projectsPage .allChallenges .chal--text:hover h2, .projectsPage .allChallenges .chal--text:hover p {
+  display: block;
+}
+
+@media screen and (max-width: 1000px) {
+  .projectsPage .page__hover {
+    display: none;
+  }
+  .projectsPage .allChallenges a {
+    width: 100%;
+  }
+  .projectsPage .allChallenges .apiChal {
+    height: 100%;
+    background-image: url("../Images/AJAX_API.png");
+    background-size: cover;
+    background-position: center;
+  }
+  .projectsPage .allChallenges .cssChal {
+    background-size: cover;
+    background-position: top;
+  }
+  .projectsPage .allChallenges .chal--text {
+    background-color: rgba(0, 0, 0, 0.9);
+    display: block;
+    height: 100%;
+  }
+  .projectsPage .allChallenges .chal--text h2, .projectsPage .allChallenges .chal--text p {
+    width: 90%;
+    margin: 0 auto;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+    display: block;
+  }
+}
+
+@-webkit-keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+@keyframes float {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(30px);
+            transform: translateY(30px);
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+}
+
+.htmlPage {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#A1A1A4), to(white));
+  background-image: linear-gradient(to bottom, #A1A1A4, white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+}
+
+.htmlPage img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 400px;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+.htmlPage .htmlPage--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.htmlPage .htmlPage--text .htmlCard {
+  border: 3px solid white;
+  font-family: "Work Sans";
+  line-height: 1.5rem;
+  width: 40%;
+  margin: 1rem;
+  padding: 2.3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.htmlPage .htmlPage--text .htmlCard div {
+  height: 75%;
+}
+
+.htmlPage .htmlPage--text .htmlCard div a {
+  text-decoration: none;
+  color: white;
+}
+
+.htmlPage .htmlPage--text .htmlCard div h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.htmlPage .htmlPage--text .htmlCard button {
+  cursor: pointer;
+  margin: 1rem 20%;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  width: 60%;
+  padding: 1rem;
+  background-color: #00778B;
+  border: none;
+  border-radius: 5rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.htmlPage .htmlPage--text .htmlCard button:hover {
+  background-color: #e34c26;
+}
+
+@media screen and (max-width: 1000px) {
+  .htmlPage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .htmlPage img {
+    height: 250px;
+    margin-bottom: 3rem;
+  }
+  .htmlPage .htmlPage--text .htmlCard {
+    width: 90%;
+  }
+  .htmlPage .htmlPage--text .htmlCard div {
+    height: 80%;
+  }
+  .htmlPage .htmlPage--text button {
+    font-size: .75rem;
+  }
+}
+
+.cssPage {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#A1A1A4), to(white));
+  background-image: linear-gradient(to bottom, #A1A1A4, white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 2rem;
+}
+
+.cssPage .cssImage {
+  width: 400px;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.cssPage .cssImage img {
+  height: 400px;
+  -webkit-animation: float 3s ease-in-out infinite;
+          animation: float 3s ease-in-out infinite;
+}
+
+.cssPage .cssPage--text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.cssPage .cssPage--text .cssCard {
+  border: 3px solid white;
+  font-family: "Work Sans";
+  line-height: 1.5rem;
+  width: 40%;
+  margin: 1rem;
+  padding: 2.3rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.cssPage .cssPage--text .cssCard div {
+  height: 75%;
+}
+
+.cssPage .cssPage--text .cssCard div a {
+  text-decoration: none;
+  color: white;
+}
+
+.cssPage .cssPage--text .cssCard div h2 {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.cssPage .cssPage--text .cssCard button {
+  cursor: pointer;
+  margin: 1rem 20%;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-size: 14px;
+  width: 60%;
+  padding: 1rem;
+  background-color: #00778B;
+  border: none;
+  border-radius: 5rem;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.cssPage .cssPage--text .cssCard button:hover {
+  background-color: #2912d9;
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .cssPage {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cssPage .cssImage {
+    -webkit-box-ordinal-group: 1;
+        -ms-flex-order: 0;
+            order: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .cssPage .cssImage img {
+    height: 175px;
+    margin-bottom: 3rem;
+  }
+  .cssPage .cssPage--text .cssCard {
+    width: 90%;
+  }
+  .cssPage .cssPage--text .cssCard div {
+    height: 80%;
+  }
+  .cssPage .cssPage--text button {
+    font-size: .75rem;
+  }
+}
+
+.apiPage {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#A1A1A4), to(white));
+  background-image: linear-gradient(to bottom, #A1A1A4, white);
+}
+
+.apiPage h1 {
+  padding: 3rem;
+  text-align: center;
+  font-family: "Josefin Sans";
+  font-size: 45px;
+}
+
+.apiPage .apiPage--cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 90%;
+  margin: auto;
+}
+
+.apiPage .apiPage--cards .apiCard {
+  background-color: #353535;
+  color: white;
+  border: inset 5px #00778B;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1rem;
+  width: 40%;
+  height: 500px;
+  text-align: center;
+  overflow: scroll;
+}
+
+.apiPage .apiPage--cards .apiCard h2 {
+  margin: 1rem auto;
+  font-size: 30px;
+  font-family: "Alegreya SC";
+  font-weight: 900;
+  padding-bottom: 1rem;
+  border-bottom: 3px solid white;
+}
+
+.apiPage .apiPage--cards .apiCard .trigger {
+  padding: 1rem;
+  height: 4rem;
+}
+
+.apiPage .apiPage--cards .apiCard .cityForm .cityForm--content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  margin: 0 auto 1rem auto;
+}
+
+.apiPage .apiPage--cards .apiCard .cityForm p {
+  padding: 1rem;
+  margin: 0 auto;
+  font-family: "Josefin Sans";
+  font-size: 18px;
+  width: 60%;
+}
+
+.apiPage .apiPage--cards .apiCard .cityForm input {
+  height: 2rem;
+}
+
+.apiPage .apiPage--cards .apiCard .apiTwo-output p {
+  width: 75%;
+  margin: 0 auto 1rem auto;
+}
+
+.btn {
+  height: 2rem;
+  background-color: #00778B;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  color: white;
+  font-family: "Playfair Display SC";
+  font-size: 14px;
+  font-variant: small-caps;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #00778B;
+}
+
+@media screen and (max-width: 1000px) {
+  .apiPage .apiPage--cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .apiPage .apiPage--cards .apiCard {
+    height: 250px;
+    width: 90%;
+  }
+  .apiPage .apiPage--cards .apiCard .apiTwo-output {
+    height: 40%;
+  }
+  .apiPage .apiPage--cards .apiCard .apiTwo-output p {
+    margin: 0;
+  }
+}
+
+.contacts--page {
+  background-image: url("../Images/blackground.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  font-family: "Work Sans";
+  padding: 2rem auto;
+}
+
+.contacts--page .contact {
+  margin-top: 2rem;
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3% 3% 0 3%;
+}
+
+.contacts--page .contact .r2h {
+  font-size: 50px;
+  margin: 1rem 0;
+  font-variant: small-caps;
+  color: white;
+  text-shadow: 0 0 20px #00778B;
+}
+
+.contacts--page .contact p {
+  text-align: center;
+}
+
+.contacts--page .contact a {
+  color: #DF0B25;
+  text-decoration: none;
+  font-size: 24px;
+  margin: 0;
+}
+
+.contacts--page .contact a:hover {
+  text-decoration: overline;
+  text-decoration: underline;
+  -webkit-animation: textBold .01s linear both;
+          animation: textBold .01s linear both;
+}
+
+.contacts--page .cform {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  margin: 2rem auto;
+}
+
+.contacts--page .cform .form__container {
+  margin: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contacts--page .cform .form__container .form--spacing {
+  margin: 1rem 0;
+  opacity: 0.4;
+}
+
+.contacts--page .cform .form__container .form--spacing input, .contacts--page .cform .form__container .form--spacing textarea {
+  width: 50%;
+  text-align: center;
+  background-color: transparent;
+  padding: 1rem;
+  font-size: 16px;
+  color: white;
+}
+
+.contacts--page .cform .form__container .form--spacing textarea {
+  background-color: rgba(40, 0, 113, 0.3);
+  width: 90%;
+  height: 10rem;
+  border: 3px solid white;
+  border-radius: 1rem;
+}
+
+.contacts--page .cform .form__container .form--spacing input {
+  border: none;
+  border-bottom: 3px solid white;
+  background-color: rgba(40, 0, 113, 0.3);
+  border-radius: 1rem;
+}
+
+.contacts--page .cform .form__container .form--spacing:hover {
+  opacity: 1.0;
+}
+
+.contacts--page .cform .form__container .buttons {
+  margin-top: 1rem;
+}
+
+.contacts--page .cform .form__container .buttons #button {
+  padding: 20px;
+  font-family: "Fredericka the Great";
+  font-size: 16px;
+  border: 3px solid white;
+  border-radius: 1rem;
+}
+
+.contacts--page .cform .form__container .buttons #button:hover {
+  color: white;
+  border: 3px solid white;
+  background-color: rgba(40, 0, 113, 0.3);
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+:-ms-input-placeholder {
+  color: white;
+}
+
+::-ms-input-placeholder {
+  color: white;
+}
+
+::placeholder {
+  color: white;
+}
+
+@media screen and (max-width: 1000px) {
+  .contacts--page .contact {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    text-align: center;
+    padding-right: 0;
+    padding-left: 0;
+  }
+  .contacts--page .contact .r2h {
+    width: 95%;
+  }
+  .contacts--page .contact a {
+    display: none;
+  }
+  .contacts--page .cform .form__container .form--spacing {
+    width: 90%;
+    margin: .5rem auto;
+  }
+}
+/*# sourceMappingURL=portfolio.css.map */

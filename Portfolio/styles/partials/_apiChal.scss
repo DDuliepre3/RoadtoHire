@@ -1,0 +1,103 @@
+.apiPage{
+    background-image: linear-gradient(to bottom, $hornetsGrey, white);
+    h1{
+        padding: 3rem;
+        text-align: center;
+        font-family: $sansSuper;
+        font-size: 45px;
+    }
+    .apiPage--cards{
+        display: flex;
+        justify-content: space-around;
+        width: 90%;
+        margin: auto;
+        .apiCard{
+            background-color: $webBlack;
+            color: white;
+            border: inset 5px $hornetsTeal;
+            justify-content: center;
+            margin-bottom: 1rem;
+            width: 40%;
+            height: 500px;
+            text-align: center;
+            overflow: scroll;
+            h2{
+                margin: 1rem auto;
+                font-size: 30px;
+                font-family: $allegra;
+                font-weight: 900;
+                padding-bottom: 1rem;
+                border-bottom: 3px solid white;
+            }
+            .trigger{
+                padding: 1rem;
+                height: 4rem;
+            }
+            .cityForm{
+                .cityForm--content{
+                    width: 50%;
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: baseline;
+                    margin: 0 auto 1rem auto;
+                }
+                p{
+                    padding: 1rem;
+                    margin: 0 auto;
+                    font-family: $sansSuper;
+                    font-size: 18px;
+                    width: 60%;
+                }
+                input{
+                    height: 2rem;
+                }
+            }
+            .apiTwo-output{
+                p{
+                    width: 75%;
+                    margin: 0 auto 1rem auto;
+                }
+            }
+        }
+    }
+}
+
+.btn{
+    height: 2rem;
+    background-color: $hornetsTeal;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    font-family: $logoName;
+    font-size: 14px;
+    font-variant: small-caps;
+    cursor: pointer;
+    &:hover{
+        background-color: white;
+        color: black;
+        border: 1px solid $hornetsTeal;
+    }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1000px){
+    .apiPage{
+        .apiPage--cards{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            .apiCard{
+                height: 250px;
+                width: 90%;
+                .apiTwo-output{
+                    height: 40%;
+                    p{
+                        margin:0;
+                    }
+                }
+            }
+        }
+    }
+}

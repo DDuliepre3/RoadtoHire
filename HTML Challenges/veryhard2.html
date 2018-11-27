@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link rel="stylesheet" href="#">
+        <script src="main.js"></script>
+    </head>
+    <body>
+        <script>
+            var stringOfName = "John Legend, Chris Brown, Michael Jackson";
+            var listOfFullNames = stringOfName.split(",");
+            var listOfReversedFullNames = [];
+            var listOfAlphabeticalFullNames = [];
+
+            for(var i = 0; i < listOfFullNames.length[i]; i++){
+                var fullName = listOfFullNames[i].split(" ");
+                var firstName = fullName[0];
+                var lastName = fullName[1];
+                var newName = lastName + " " + firstName;
+                listOfReversedFullNames.push(newName);
+            }
+
+            console.log('I am here', listOfReversedFullNames);
+            console.log('alphabeticalize', listOfReversedFullNames.sort());
+            listOfReversedFullNames = listOfReversedFullNames.sort();
+
+            for(var i = 0; i< listOfReversedFullNames.length; i++){
+              var fullName = listOfReversedFullNames[1].split(" ");
+              var firstName = fullName[0];
+              var firstName = fullName[1];
+              var newName = lastName + " " + firstName;
+              listOfAlphabeticalFullNames.push(newName);
+            }
+
+            var name = "name";
+            console.log(listOfAlphabeticalFullNames);
+            var html = "<ol>";
+            for(var i = 0; i < listOfAlphabeticalFullNames.length; i++){
+                var fullName = listOfAlphabeticalFullNames[i].split(" ");
+                var firstName = fullName[0];
+                var lastName = fullName[1];
+
+                var li = "/<ol>";
+                    li = li + "<div class= 'firstName'>" + firstName + "</div>";
+                    li = li + "<div class= 'lastName'>" + lastName + "</div>";
+                li = li + "</li>";
+                console.log('li - ', li);
+                html = html + li;
+            }
+            html = html + "</ol>";
+            var holder = document.getElementById('nameHolder')
+            holder.innerHTML = html;
+        </script>
+        <style>
+            .lastName {
+                font-weight: bold;
+                color: red;
+            }
+        </style>
+    </body>
+    
+</html>
+
+<!-- Array is elements separated by commas inside brackets. -->
+<!-- The spli() method splits a String object into an array of strings by separating the string into substrings, using a specified separator string to determine where to make each split.  .push adds the element given to the end of the array. -->
+<!-- ÷ -->

@@ -1,0 +1,72 @@
+/**************
+SASS BASICS
+**************/
+
+
+
+/**************
+SASS ADVANCED
+**************/
+
+@for $i from START through END {
+    .element:nth-child(#{$i}) {
+        top:random() + vh;
+        left:random() + vw;
+    }
+}
+
+@for $i from 1 through 50 {
+    @keyframes animation-number-#{$i} {
+        @for $k from 1 through 10{
+            #{$k}0% {
+                top:random() + vh;
+                left:random() + vw;
+            }
+        }
+    }
+}
+
+/**************
+SASS
+**************/
+
+@mixin random-rgba($attr) {
+    #{$attr}: rgba(random(255), random(255), random(255), random(10) * 0.1);
+    }
+
+@keyframes rain{
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+@for $i from 1 through 50 {
+    .stripe:nth-child(#{$i}) {
+        left: random(100) * 1%;
+        @include random-rgba(background-color);
+        animation-delay: $i * 0.1s;
+    }
+}
+
+html, body { height: 100%; }
+body {
+  overflow: hidden;
+  min-height: 100%;
+  background: #222;
+}
+.wrap {
+  position: relative;
+  min-height: 100%;
+}
+.stripe {
+  background: white;
+  height: 100%;
+  width: 1%;
+  border-radius: 10px;
+  position: absolute;
+  top: -100%;
+  animation: rain 4s infinite alternate;
+}

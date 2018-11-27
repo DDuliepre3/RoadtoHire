@@ -1,0 +1,113 @@
+.projectsPage{
+    h1{ 
+        color: $webBlack;
+        font-family: $sansSuper;
+        font-size: 60px;
+        margin: 2rem 0 0 0;
+        width: 100%;
+        text-align: center;
+        font-weight: 400;
+        font-variant: small-caps;
+    }
+    p{
+        width: 100%;
+        text-align: center;
+        font-family: $allegra;
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .allChallenges{
+        // background-color: $hornetsTeal;
+        // margin: 1rem 0;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: space-evenly;
+        a{
+            height: 200px;
+            width: 30%;
+            padding: 1rem;
+            border: 6px solid $hornetsTeal;
+            text-decoration: none;
+            margin: 2rem 1rem;
+        }
+        .htmlChal{
+            height: 100%;
+            background-image: url('../Images/mediumHTML.png');
+            background-size: cover;
+        }
+        .cssChal{
+            height:100%;
+            background-image: url('../Images/CssDaily5.png');
+            background-size: cover;
+            background-position: top;
+        }
+        .apiChal{
+            height: 100%;
+            background-image: url('../Images/AJAX_API.png');
+            background-size: cover;
+        }
+        .midTermSketch{
+            height: 100%;
+            background-image: url('../Images/MidTermReplica.png');
+            background-size: cover;
+        }
+        .chal--text{
+            height: 100%;
+            h2{
+                display: none;
+                font-family: $chonB;
+                font-size: 20px;
+                padding: 2rem 0;
+                color: $hornetsTeal;
+            }
+            p{
+                display:none;
+                font-family: $logoName;
+                color: white;
+            }
+            &:hover{
+                background-color: rgba(0,0,0,0.9);
+                display: block;
+                h2,p{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px){
+    .projectsPage{
+        .page__hover{
+            display: none;
+        }
+        .allChallenges{
+            a{
+                width: 100%;
+            }
+            .apiChal{
+                height: 100%;
+                background-image: url('../Images/AJAX_API.png');
+                background-size: cover;
+                background-position: center;
+            }
+            .cssChal{
+                background-size: cover;
+                background-position: top;
+            }
+            .chal--text{
+                background-color: rgba(0,0,0,0.9);
+                display: block;
+                height: 100%;
+                h2, p{
+                    width: 90%;
+                    margin: 0 auto;
+                    align-content: flex-end;
+                    display: block;
+                }
+            }
+        }
+    }
+}

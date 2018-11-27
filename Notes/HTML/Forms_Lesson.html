@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <body>
+        <form method="GET" action="the.php">
+            <fieldset>
+                <label for="FName">First Name</label>
+                <input id="FName" type="text" name="fname" value="" placeholder="Placeholder">
+            </fieldset>
+            <div>
+                <label for="GenderM">Male:<input id="GenderM" type="radio" name="gender" value"Male"></label>
+                <label for="GenderF">Female:<input id="GenderF" type="radio" name="gender" value"Female"></label>
+            </div>
+            <div>
+                <input type="checkbox" name="FavoriteFoods" value="A">
+                <input type="checkbox" name="FavoriteFoods" value="B">
+                <input type="checkbox" name="FavoriteFoods" value="C">
+                <input type="checkbox" name="FavoriteFoods" value="D">
+                <input type="checkbox" name="FavoriteFoods" value="E">
+                <input type="checkbox" name="FavoriteFoods" value="F">
+            </div>
+            <div>
+                <label for="favCar">What is Your Favorite Car?</label>
+                <select id="favCar" name="favCar">
+                    <option value="bmw">BMW</option>
+                    <option value="ferrari">Ferrari</option>
+                    <option value="yugo">Yugo</option>
+                </select>
+            </div>
+            <div>
+                <label for="password">Password:</label>
+                <input type="password" name="password" id="password">
+            </div>
+            <input type="hidden" name="secret" value="1234">
+            <div>
+                <label for="essay">TextArea</label>
+                <textarea cols"40" rows="10" placeholder="Empty" name="textarea" value="k"></textarea>
+            </div>
+            <div>
+                <input type="submit" name="Submit">
+                <input type="reset" name="reset">
+            </div>
+        </form>
+    </body>
+</html>

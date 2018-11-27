@@ -1,0 +1,187 @@
+.contactPage{
+    h1{
+        width: 100%;
+        font-family: $contactHead;
+        font-size: 38px;
+        text-align: center;
+        background-color: white;
+        padding: 3% 0;
+    }
+    .contactPage__doubleContainer{
+        display: flex;
+        .contactPage__container{
+            margin: 3rem;
+            min-width: 43%;
+            .contactPage__boxed{
+                min-height: 90%;
+                padding: 25px 30px 10px 30px;
+                background-color: white;
+                box-shadow: 0 2px 4px 0 $gamerBlue;
+                h2{
+                    font-family: $paraText;
+                    font-size: 32px;
+                    margin: 0 0 10px;
+                }
+                .contact--answer{
+                    background-image: linear-gradient(to right, $gamerSilver , $gamerSilver);
+                    padding: 20px;
+                    display: none;
+                    color: black;
+                    margin-bottom: 5px;
+                    font-family: $answer;
+                    // width: 90%;
+                }
+                .contact--question{
+                    margin-bottom: 10px;
+                    display: block;
+                    font-family: $paraText;
+                    color: $gamerBurn;
+                    &:hover{
+                        margin-bottom: 0;
+                        cursor: pointer;
+                    }
+                    &:hover + p{
+                        display: block;
+                        
+                    }
+                }
+            }
+            .contactPage__form{
+                min-height: 90%;
+                padding: 25px 30px 10px 30px;
+                background-color: white;
+                box-shadow: 0 2px 4px 0 $gamerBlue;
+                h2{
+                    font-family: $paraText;
+                    font-size: 32px;
+                    margin: 0 0 10px;
+                }
+                form{
+                    display: flex;
+                    flex-wrap: wrap;
+                    #fName, #lName, #email, #tel,.comments{
+                        width: 100%;
+                        text-align: center;
+                        border: none;
+                        border-bottom: 2px solid $gamerBlue;
+                        margin-bottom: 1rem;
+                    }
+                    #dropdown{
+                        width: 100%;
+                        background-color: $gamerSilver;
+                        margin-bottom: 1rem;
+                    }
+                    #submit{
+                        width: 100%;
+                        padding: 15px 0;
+                        border: 1px black solid;
+                        border-radius: 5px;
+                        background-color: $gamerSilver;
+                        font-family: $gamerText;
+                        font-size: bold;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+@media(max-width: 768px) {
+    .contactPage{
+        h1{
+            width: 100%;
+            font-family: $contactHead;
+            font-size: 38px;
+            text-align: center;
+            background-color: white;
+            padding: 3% 0;
+        }
+        .contactPage__doubleContainer{
+            display: block;
+            .contactPage__container{
+                width: 80%;
+                margin: 3rem;
+                // flex-wrap: wrap;
+                .contactPage__boxed{
+                    min-height: 90%;
+                    width: 100%;
+                    padding: 25px 30px 10px 30px;
+                    background-color: white;
+                    box-shadow: 0 2px 4px 0 $gamerBlue;
+                    h2{
+                        font-family: $paraText;
+                        font-size: 32px;
+                        margin: 0 0 10px;
+                    }
+                    .contact--answer{
+                        background-image: linear-gradient(to right, $gamerSilver , $gamerSilver);
+                        padding: 20px;
+                        display: none;
+                        color: black;
+                        margin-bottom: 5px;
+                        font-family: $answer;
+                    }
+                    .contact--question{
+                        margin-bottom: 10px;
+                        display: block;
+                        font-family: $paraText;
+                        color: $gamerBurn;
+                        &:hover{
+                            margin-bottom: 0;
+                            cursor: pointer;
+                        }
+                        &:hover + p{
+                            display: block;
+                            
+                        }
+                    }
+                }
+                .contactPage__form{
+                    min-height: 90%;
+                    width: 100%;
+                    padding: 25px 30px 10px 30px;
+                    background-color: $gamerSilver;
+                    box-shadow: 0 2px 4px 0 $gamerBlue;
+                    h2{
+                        font-family: $paraText;
+                        font-size: 32px;
+                        margin: 0 0 10px;
+                    }
+                    form{
+                        display: flex;
+                        flex-wrap: wrap;
+                        #fName, #lName, #email, #tel, #comments{
+                            width: 100%;
+                            text-align: center;
+                            border: none;
+                            border-bottom: 2px solid $gamerBlue;
+                            margin-bottom: 1rem;
+                        }
+                        #comments {
+                            height: 200px;
+                        }
+                        #dropdown{
+                            width: 100%;
+                            background-color: $gamerSilver;
+                            margin-bottom: 1rem;
+                        }
+                        #submit{
+                            width: 100%;
+                            margin-bottom: 10px;
+                            padding: 8px 0;
+                            border: 1px $gamerYellow solid;
+                            border-radius: 5px;
+                            background-color: $gamerBlue;
+                            color: $gamerYellow;
+                            font-family: $gamerText;
+                            font-size: bold;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

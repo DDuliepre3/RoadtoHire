@@ -1,0 +1,106 @@
+@keyframes textChangeRed{
+    from{color: white;}
+    to{color: $logoRed;}
+}
+
+.biography--page{
+    // background-color: $hornetsGrey;
+    width: 100%;
+    display: flex;
+    .info{
+        order: 2;
+        width: 40%;
+        margin: 2.5% 5% 5% 2.5%;
+        font-family: $allegra;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 900;
+        padding-top: 1.5rem;
+    }
+    .photo{
+        padding: 2rem 1rem 1rem 1rem;
+        background-color: $webBlack;
+        border: 1px solid $webBlack;
+        box-shadow: 5px 10px 10px $hornetsGrey;
+        width: 40%;
+        margin: 2.5% 2.5% 2.5% 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 90%;
+            border: 5px solid white;
+        }
+        .photo--info{
+            padding-top: 1rem;
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .info__job{
+                display: flex;
+                width: 100%;
+                align-items: center;
+                margin: 1rem 0 2rem 0;
+                justify-content: space-between;
+                .line{
+                    border: 1px solid white;
+                    background-color: white;
+                    height: 2px;
+                    width: 15%;
+                }
+                a{
+                    text-decoration: none;
+                }
+                h2{
+                    font-family: $ftb;
+                    font-size: 30px;
+                    font-variant: small-caps;
+                    color: white;
+                    text-align: center;
+                    transition: all .1s linear;
+                    &:hover{
+                        transform: scale(1.2);
+                        animation: textChangeRed .1s ease-out forwards;
+                    }
+                }
+            }
+            .info__background{
+                text-align: center;
+                h3{
+                    color: white;
+                    font-family: $eczar;
+                    margin-bottom: 1rem;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1000px){
+    .biography--page{
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        .info{
+            width: 85%;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+        }
+        .photo{
+            width: 80%;
+            margin: 2rem 0 0 0;
+            .photo--info{
+                .info__job{
+                    h2{
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

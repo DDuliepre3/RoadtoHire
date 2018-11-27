@@ -1,0 +1,15 @@
+/*CSS Daily Challenge 1*/
+
+div {
+    background-color: #00788C;
+    width: 600px;
+    height: 580px;
+    transition: width 2s ease-out, height 4s;
+    position: absolute;
+    transform: scaleY(1.5);
+}
+
+div:hover {
+    width: 300px;
+    height: 290px;
+}

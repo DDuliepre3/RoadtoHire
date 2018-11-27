@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DomDuliepre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="./Images/ddLogo.png" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./styles/portfolio.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar--desktop">
+                <i class="fas fa-bars"></i>
+                <div class="nav__left">
+                    <a href="index.html"><img src="./Images/ddLogo.png" alt="Logo"></a>
+                    <div class="nav__left--name">
+                        <p class="first"><a href="index.html">OMINICK</a></p>
+                        <p class="last"><a href="index.html">ULIEPRE</a></p>
+                    </div>
+                </div>                
+                <ul>
+                    <li><a href="index.html" class="navLinks">Home</a></li>
+                    <li><a href="biography.html" class="navLinks">Biography</a></li>
+                    <li><a href="resume.html" class="navLinks" id="selected">Resumé</a></li>
+                    <li class="dropdown"><a href="projects.html" class="navLinks">Projects</a>
+                        <ul class="dropdown--list dropdown--offPage">
+                            <a href="htmlChal.html"><div class="dropdown--list__item">
+                                <li>HTML Challenges</li>
+                            </div></a>
+                            <a href="cssChal.html"><div class="dropdown--list__item">
+                                <li>CSS Challenges</li>
+                            </div></a>
+                            <a href="apiChal.html"><div class="dropdown--list__item">
+                                <li>AJAX API Challenges</li>
+                            </div></a>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="navLinks">Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav class="navbar--mobile">
+                <i class="fas fa-bars" id="navBtn"></i>
+                <div class="nav__left">
+                    <a href="index.html"><img src="./Images/ddLogo.png" alt="Logo"></a>
+                    <div class="nav__left--name">
+                        <p><a href="index.html">OMINICK</a></p>
+                        <p><a href="index.html">ULIEPRE</a></p>
+                    </div>
+                </div>
+                <div class="modalDiv" id="modal">           
+                    <ul class="modal--content">
+                        <span class="close">&times;</span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="biography.html">Biography</a></li>
+                        <li><a href="resume.html">Resumé</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="resPage">
+            <aside class="asideRes">
+                <div class="asideRes--card">
+                    <figure>
+                        <img src="Images/Gateway_Portrait.jpg" id="professional" alt="Professional">
+                    </figure>
+                    <h1>Dominick Duliepre Jr.</h1>
+                    <address>
+                        <p>10922 Trout Creek Pl.</p>
+                        <p>Davidson, NC 28036</p>
+                    </address>
+                    <p><a href="mailto:dominick.duliepre@gmail.com">dominick.duliepre@gmail.com</a></p>
+                    <p><a href="tel:347-563-4533">(347) 563-4533</a></p>
+                </div>
+            </aside>
+            <div class="mainRes">
+                <section title="Work Experience">
+                    <h2>Work Experience</h2>
+                    <div class="jobDescription">
+                        <div class="dateOf--h3">
+                            <h3>Road to Hire Tech Academy</h3>
+                            <p>June 2018 - November 2018</p>
+                        </div>
+                        <div class="jobSection">
+                            <h4 class="job--title">Student</h4>
+                            <div class="resLine"></div>
+                        </div>
+                        <ul>
+                            <li>Responsibility in learning various amounts of coding languages and web development techniques.</li>
+                            <li>Train myself with proper business area manners and soft skills.</li>
+                            <li>Collaborate with peers and mentors to help further development in areas of struggle.</li>
+                            <li>Attain leadership skills and time management by attending professional development classes.</li>
+                        </ul>
+                    </div>
+
+                    <div class="jobDescription harrisTeeter">
+                        <div class="dateOf--h3">
+                            <h3>Harris Teeter</h3>
+                            <p>2017 - Present</p>
+                        </div>
+                        <div class="jobSection">
+                            <h4 class="job--title">Cashier</h4>
+                            <div class="resLine"></div>
+                        </div>
+                        <p>Received praise from customers, co-workers, and managers for excellent customer service.</p>
+                    </div>
+                </section>
+                <section title="Education">
+                    <h2>Education</h2>
+                        <div class="dateOf--h3">
+                            <h3>Cox Mill High School</h3>
+                            <p>2014-2018</p>
+                        </div>
+                        <ul class="edu--list">
+                            <li>Class of 2018</li>
+                            <li>GPA: 4.1302</li>
+                            <li>Total of 18 Honors Classes</li>
+                            <li>Total of 3 Advanced Placement Classes</li>
+                            <li>National BETA Club</li>
+                            <li>Inaugural Academy of Information Technology (<abbr title="Academy of Information Technology">AoIT</abbr>) Class</li>
+                            <li>AoIT Student Advisory Board</li>
+                        </ul>
+                </section>
+                <section title="Achievements">
+                    <h2>Achievements</h2>
+                    <ul class="achieve--list">
+                        <li>Cox Mill High School Class of 2018</li>
+                        <li>Microsoft Word &amp; Powerpoint Certified</li>
+                        <li>United States President's Educational Achievement Award</li>
+                        <li>Our Lady of Consolation Catholic Church Youth Writing Event</li>
+                        <li>26th Judicial District Trial Court Justice Initiatives Award</li>
+                        <li>Harris Road Middle School 2013-2014 Perfect Attendance &amp; Honor Role Award</li>
+                        <li>Charlotte Hornets National Basketball Academy 'Sick Handles' Award</li>
+                        <li>Our Lady of Consolation Athletic Association 2013-2018 Award</li>
+                    </ul>
+                </section>
+                <section title="Volunteer Experience">
+                    <h2>Volunteer Experience</h2>
+                    <div class="dateOf--list">
+                        <p>Our Lady of Consolation Catholic Church Altar Server</p>
+                        <p class="item--expDate">2013 - Present</p>
+                    </div>
+                    <div class="dateOf--list">
+                        <p>Cabarrus County Teen Court Program Volunteer</p>
+                        <p class="item--expDate">2012 - 2016</p>
+                    </div>
+                    <div class="dateOf--list">
+                        <p>JoyProm</p>
+                        <p class="item--expDate">May 2017 | May 2018</p>
+                    </div>
+                </section>
+                <section title="Interests">
+                    <h2>Interests</h2>
+                    <p>Basketball</p>
+                    <p>Karate</p>
+                    <p>Instruments (Clarinet &amp; Saxophone)</p>
+                </section>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer_copy">
+                <p><small>&copy; Copyright. Information on this site is for educational purposes only.</small></p>
+            </div>
+            <div class="footer__images">
+                <a target="_ " href="https://www.instagram.com/nicky_dominick/"><img src="Images/Instagram.png" alt="instagram" class="footer"></a>
+                <a target="_ " href="https://www.linkedin.com/in/dominick-duliepre-06b028168/"><img src="Images/LinkedIn.png" alt="LinkedIn" class="footer"></a>
+                <a target="_ " href="http://road2hire.org/"><img src="Images/R2H.jpg" alt="road2hire" class="footer"></a>
+            </div>
+        </footer>
+        <script src="form.js"></script>
+    </body>
+</html>

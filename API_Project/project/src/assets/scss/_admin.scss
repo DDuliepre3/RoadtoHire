@@ -1,0 +1,178 @@
+// Admin Page
+.adminPage {
+  .label-header {
+    .admin_labels {
+      height: 100px;
+      display: flex;
+      text-align: center;
+      width: 88%;
+      box-shadow: 0 0 30px 0 $gamerGrey;
+      justify-content: space-around;
+      align-items: center;
+      margin: 1rem auto;
+      padding: 1%;
+      font-family: $navFont;
+      li{
+          width:10%;
+      }
+      .price,.id{
+          text-align: left;
+      }
+    }
+  }
+  .adminPage_cards {
+    .adminPage__items {
+      margin: 1rem 5%;
+      //   width: 90%;
+      .adminPage__section {
+        display: flex;
+        flex-wrap: wrap;
+        .adminPage--boxes {
+          display: flex;
+          width: 100%;
+          // min-width: 60%;
+          position: relative;
+          box-shadow: 5px 5px 9px 1px $gamerGrey;
+          justify-content: space-evenly;
+          background-color: white;
+          padding: 1%;
+          .row_adminCard {
+            display: flex;
+            text-align: center;
+            width: 100%;
+            justify-content: space-around;
+            align-items: center;
+            h2 {
+              width: 16%;
+              font-family: $rye;
+              letter-spacing: 3px;
+              text-align: center;
+              // margin-bottom: 0.5rem;
+            }
+            h3 {
+              width: 16%;
+              text-align: center;
+              color: green;
+            }
+            img {
+              // height: 150px;
+              width: 17%;
+              display: flex;
+              // margin-top: 0.5rem;
+            }
+            .product--id {
+              width: 16%;
+              text-align: center;
+            }
+          }
+        }
+      }
+      .adminPage--Api {
+        width: 16%;
+        display: flex;
+        padding: 2rem 0.5rem;
+        flex-direction: column;
+        justify-content: center;
+        button {
+          padding: 10px;
+          border-radius: 10px;
+          font-family: $gamerText;
+          color: $gamerSilver;
+          border: 2px solid white;
+        }
+        .btn--edit {
+          background-image: linear-gradient(
+            to bottom right,
+            #3bbf34,
+            rgb(16, 104, 16)
+          );
+          &:hover {
+            background-image: none;
+            background-color: white;
+            color: #3bbf34;
+            border: 2px solid #3bbf34;
+          }
+        }
+        .btn--delete {
+          background-image: linear-gradient(
+            to bottom right,
+            rgb(153, 14, 14),
+            #e30400
+          );
+          &:hover {
+            background-image: none;
+            background-color: white;
+            color: #e30400;
+            border: 2px solid #e30400;
+          }
+        }
+      }
+    }
+  }
+  .adminPage__buttons {
+    display: flex;
+    background-color: $gamerBlue;
+    justify-content: center;
+    .products,
+    .contact {
+      // margin: 0 auto;
+      width: 10%;
+      padding: 0.5rem;
+      font-family: $answer;
+      font-size: large;
+      &:hover {
+        background-color: $gamerYellow;
+      }
+    }
+  }
+  .add {
+    width: 90%;
+    margin: 0 5%;
+    margin-top: 1rem;
+    background-image: linear-gradient(
+      to bottom right,
+      #3bbf34,
+      rgb(16, 104, 16)
+    );
+    color: $gamerSilver;
+    border-radius: 2rem;
+    font-family: $gamerText;
+    padding: 1rem;
+    align-content: flex-end;
+    border: 2px solid $gamerSilver;
+    &:hover {
+      background-image: none;
+      background-color: $gamerSilver;
+      color: #3bbf34;
+      border: 2px solid #3bbf34;
+    }
+  }
+}
+
+// Modal
+#show-product-modal,
+#show-add-modal,
+#show-delete-modal {
+  display: block;
+  position: fixed;
+  top: 20%;
+  text-align: center;
+  background-color: aliceblue;
+  border: 1px solid black;
+  border-radius: 1%;
+  z-index: 1;
+}
+#show-product-modal {
+  padding: 6%;
+  margin-left: 35%;
+}
+#show-add-modal {
+  padding: 6%;
+  margin-left: 35%;
+  width: 21.5%;
+  height: 317px;
+}
+#show-delete-modal {
+  padding: 3%;
+  margin-left: 22%;
+}

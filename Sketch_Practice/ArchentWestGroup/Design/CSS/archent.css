@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'Audimat';
+  src: url("../../fonts/AUdimat-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'DBeyond';
+  src: url("../../fonts/DPSDbeyond.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'SansBold';
+  src: url("../../fonts/SourceSansPro-Bold.ttf") format("truetype");
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'SansLight';
+  src: url("../../fonts/SourceSansPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'SansReg';
+  src: url("../../fonts/SourceSansPro-Regular.ttf") format("truetype");
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  /* vertical-align: baseline; */
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  background-image: url("../../img/background_img.jpg");
+  background-repeat: repeat;
+  background-size: cover;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .hero--background {
+  background-image: url("../../img/hero.jpg");
+  background-repeat: no-repeat;
+  background-color: white;
+  width: 1200px;
+  height: 2860px;
+  margin: 170px auto;
+}
+
+body .hero--background nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: auto;
+  margin: 55px 78px 124px 80px;
+}
+
+body .hero--background nav .hamburger {
+  width: 24px;
+  height: 22px;
+}
+
+body .hero--background nav .logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .hero--background nav .nav__search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .hero--background nav .nav__search p {
+  padding-right: 12px;
+}
+
+body .hero--background .cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .hero--background .cards .cards--left {
+  background-color: red;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  margin-left: 72px;
+}
+
+body .hero--background .cards .cards--left h1 {
+  background-color: red;
+  height: 192px;
+  font-family: 'DBeyond';
+}
+
+body .hero--background .cards .cards--right {
+  background-color: blue;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+}
+
+body .hero--background .cards .cards--right .card--luxembourg {
+  border: 20px solid white;
+  background-image: url("../../img/cardsRight/luxembourg.jpg");
+  background-size: cover;
+}
+
+body .hero--background .page--blocks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .hero--background .page--blocks .block1, body .hero--background .page--blocks .block2, body .hero--background .page--blocks .block3 {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #A5ACAB;
+}
+
+body .hero--background .page--blocks .block3 {
+  border: 2px solid black;
+}
+
+body .hero--background footer {
+  border-top: 2px solid #979797;
+  background-color: white;
+}
+
+body .hero--background footer .footer--links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=archent.css.map */

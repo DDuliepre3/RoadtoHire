@@ -1,0 +1,156 @@
+/* CSS Basic Layout*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+    font-family: '';
+    url: '';
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    color: red;
+    font-family: sans-serif;
+}
+
+.box_model {
+    background: #5A2D81;
+    padding: 20px;
+    width: 100%;
+    height: 538px;
+    /*border-style: solid;
+    border-color: black;
+    border-width: 5px; */
+    border: 5px solid black;
+    margin: 20px;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+/***************
+NAVIGATION
+***************/
+
+.main-nav{
+    background-color: plum;
+    width: 1080px;
+    height: 48px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+li {
+    margin-right: 18px;
+    list-style-type: none;
+}
+
+.item-1 {
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.item-3 {
+    order: -1;
+    align-self: flex-end; 
+}
+
+/***************
+KEYFRAMES
+***************/
+
+div:hover{
+    background-color: red;
+    border-radius: 4px;
+}
+
+div:active {
+    background-color: teal;
+}
+
+div {
+    background-color: #00788C;
+    width: 600px;
+    height: 580px;
+    animation: stylin 3s ease infinite;
+    transition-duration: 3s;
+    transition-property: all;
+    position: absolute;
+}
+
+@keyframes stylin {
+    0% {
+        width: 600px;
+        height: 580px;
+        top: 0%;
+        left: 0%;
+        background-color: #00788C;
+    }
+    50% {
+        width: 200px;
+        height: 195px;
+        top: 0%;
+        left: 100%;
+        background-color: #1D1160;
+    }
+    100% {
+        width: 600px;
+        height: 580px;
+        top: 0%;
+        left: 0%;
+        background-color: #00788C;
+    }
+}
+
+/***************
+TRANSITION + TRANSFORM
+***************/
+
+.photo-overlay {
+    opacity: 0;
+    /* transition-property: opacity;
+    transition-duration: .5s; */
+    transition-property: background border-radius color;
+    transition-duration: 0.5s, 0.3s;
+}
+
+.photo-overlay:hover {
+    opacity: 2;
+}
+
+.transF {
+    transition: transform 0.5s;
+    transition-delay: 0.3s;
+}
+
+.transF:hover {
+    transform: rotate(-25deg) skewY(30deg) skewX(30deg) scale(1.5, 1) translate(-10px);
+}
+
+/***************
+MEDIA QUERY
+***************/
+
+@media (min-width: 480px){
+    h1 {
+        color: blueviolet;
+        font-family: sans-serif;
+    }
+}
+
+/* 
+
+Selectors
+    #id
+    .class
+    {attribute} 
+*/

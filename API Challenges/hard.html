@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Hard AJAX</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h1>Finding the <abbr title="International Space Station">ISS</abbr></h1>
+        <form id="lonLat">
+            Type in a Latitude located in the US: <input type="text" name="lat" id="lat"><br>
+            Type in a Longitude located in the US: <input type="text" name="long" id="long"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <button onclick="getLocation()">ksi</button>
+        <div id="userOutput"></div> 
+        
+        <script>
+            // HARD: Create a page with a form to enter your longitude and latitude. When the form is submitted, display a list of date/times that the International Space Station will pass over the given location.
+            
+            // HARD PT. 2: Add a button to your HARD solution that will use the browsers geolocation to set the longitude and latitude automatically.
+            let output = document.getElementById("userOutput");
+            let lonLat = document.getElementById("lonLat");
+
+            lonLat.addEventListener('submit', function(e) {
+                e.preventDefault();
+                go();
+            });
+            
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(setPosition);
+                } else {
+                    output.innerHTML = "Geolocation is not supported by this browser.";
+                }
+            }
+            function setPosition(position) {
+                lat.value = position.coords.latitude;
+                long.value = position.coords.longitude;
+                go();
+            }
+
+            function go () {
+                    
+                var long = document.getElementById('long').value;
+                var lat = document.getElementById('lat').value;
+
+                var url = `http://api.open-notify.org/iss-pass.json?lat=${lat}&lon=${long}`;
+                    
+                fetch(url).then(
+                    function(response){
+                        return response.json();
+                    }).then(function(data){
+                        console.log(data)
+                        stationTrack(data);
+                    })
+                
+                function stationTrack(data) {
+                    if(data.message !== 'success'){
+                        output.innerHTML = 'Enter a correct longitude and latitude';
+                    }
+
+                    for(var i=0; i < data.response.length; i++){
+                        let date = new Date(data.response[i].risetime*1000);
+                        output.innerHTML += `The shuttle will arrive at ${date}.<br />`;
+                    }
+                }
+            }
+
+
+        </script>
+    </body>
+</html>

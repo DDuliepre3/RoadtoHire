@@ -1,0 +1,87 @@
+.cssPage{
+    background-image: linear-gradient(to bottom, $hornetsGrey, white);
+    display:flex;
+    padding: 2rem;
+    .cssImage{
+        width: 400px;
+        order: 2;
+        align-self: center;
+        img{
+            height: 400px;
+            animation: float 3s ease-in-out infinite;
+        }
+    }
+    .cssPage--text{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        .cssCard{
+            border: 3px solid white;
+            font-family: $contactText;
+            line-height: 1.5rem;
+            width: 40%;
+            margin: 1rem;
+            padding: 2.3rem;
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            div{
+                height: 75%;
+                a{
+                    text-decoration: none;
+                    color: white;
+                }
+                h2{
+                    font-size: 24px;
+                    text-align: center;
+                    margin-bottom: 1rem;
+                }
+            }
+            button{
+                cursor: pointer;
+                margin: 1rem 20%;
+                text-transform: uppercase;
+                font-weight: 900;
+                font-size: 14px;
+                width: 60%;
+                padding: 1rem;
+                background-color: $hornetsTeal;
+                border: none;
+                border-radius: 5rem;
+                align-items: baseline;
+                &:hover{
+                    background-color: #2912d9;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// MEDIA QUERIES
+
+@media screen and (max-width: 1000px){
+    .cssPage{
+        display: flex;
+        flex-direction: column;
+        .cssImage{
+            order: 0;
+            width: 100%;
+            text-align: center;
+            img{
+                height: 175px;
+                margin-bottom: 3rem;
+            }
+        }
+        .cssPage--text{
+            .cssCard{
+                width: 90%;
+                div{
+                    height: 80%;
+                }
+            }
+            button{
+                font-size: .75rem;
+            }
+        }
+    }
+}

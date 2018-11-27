@@ -1,0 +1,39 @@
+.all {
+    border-radius: 100%;
+    max-width: 600px;
+    height: 500px;
+    background-color: black;
+}
+
+.half {
+    display: flex;
+    height: 250px;
+}
+
+.slice {
+    color: white;
+    min-width: 50%;
+    border: 1px white solid;
+}
+
+.one p, .two p, .three p, .four p{
+    position: relative;
+}
+
+.one p{
+    top: 170px;
+    left: 230px;
+}
+
+.two p{
+    top: 170px;
+    left: 30px;
+}
+
+.three p{
+    left: 230px;
+}
+
+.four p{
+    left: 30px;
+}

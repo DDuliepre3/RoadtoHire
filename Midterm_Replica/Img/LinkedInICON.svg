@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>linkedin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Footer" transform="translate(-1367.000000, -75.000000)">
+            <g id="footer">
+                <g id="social" transform="translate(1367.000000, 75.000000)">
+                    <g id="linkedin">
+                        <g id="Group-3" fill="#1A237E">
+                            <path d="M40,20 C40,31.0456 31.0456,40 20,40 C8.9544,40 0,31.0456 0,20 C0,8.9544 8.9544,0 20,0 C31.0456,0 40,8.9544 40,20" id="Fill-1"></path>
+                        </g>
+                        <path d="M13.3288,9 C14.6124,9 15.6556,10.0432 15.6556,11.3276 C15.6556,12.6128 14.6124,13.6564 13.3288,13.6564 C12.0416,13.6564 11,12.6128 11,11.3276 C11,10.0432 12.0416,9 13.3288,9 L13.3288,9 Z M11.32,28.3424 L15.336,28.3424 L15.336,15.4224 L11.32,15.4224 L11.32,28.3424 Z" id="Fill-4" fill="#FFFFFF"></path>
+                        <path d="M18,15.3212 L21.8516,15.3212 L21.8516,17.0868 L21.9052,17.0868 C22.4416,16.0708 23.7512,15 25.7048,15 C29.7708,15 30.5216,17.676 30.5216,21.1544 L30.5216,28.2412 L26.5088,28.2412 L26.5088,21.958 C26.5088,20.46 26.4812,18.5324 24.4224,18.5324 C22.3328,18.5324 22.012,20.1648 22.012,21.8496 L22.012,28.2412 L18,28.2412 L18,15.3212 Z" id="Fill-6" fill="#FFFFFF"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

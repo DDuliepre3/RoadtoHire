@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>DomDuliepre</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="./Images/ddLogo.png" />
+        <link rel="stylesheet" type="text/css" media="screen" href="./styles/portfolio.css" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar--desktop">
+                <i class="fas fa-bars"></i>
+                <div class="nav__left">
+                    <a href="index.html"><img src="./Images/ddLogo.png" alt="Logo"></a>
+                    <div class="nav__left--name">
+                        <p class="first"><a href="index.html">OMINICK</a></p>
+                        <p class="last"><a href="index.html">ULIEPRE</a></p>
+                    </div>
+                </div>                
+                <ul>
+                    <li><a href="index.html" class="navLinks">Home</a></li>
+                    <li><a href="biography.html" class="navLinks">Biography</a></li>
+                    <li><a href="resume.html" class="navLinks">Resumé</a></li>
+                    <li class="dropdown"><a href="projects.html" class="navLinks" id="selected">Projects</a>
+                        <ul class="dropdown--list">
+                            <a href="htmlChal.html"><div class="dropdown--list__item">
+                                <li>HTML Challenges</li>
+                            </div></a>
+                            <a href="cssChal.html"><div class="dropdown--list__item">
+                                <li>CSS Challenges</li>
+                            </div></a>
+                            <a href="apiChal.html"><div class="dropdown--list__item">
+                                <li>AJAX API Challenges</li>
+                            </div></a>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html" class="navLinks">Contact</a></li>
+                </ul>
+            </nav>
+
+            <nav class="navbar--mobile">
+                <i class="fas fa-bars" id="navBtn"></i>
+                <div class="nav__left">
+                    <a href="index.html"><img src="./Images/ddLogo.png" alt="Logo"></a>
+                    <div class="nav__left--name">
+                        <p><a href="index.html">OMINICK</a></p>
+                        <p><a href="index.html">ULIEPRE</a></p>
+                    </div>
+                </div>
+                <div class="modalDiv" id="modal">           
+                    <ul class="modal--content">
+                        <span class="close">&times;</span>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="biography.html">Biography</a></li>
+                        <li><a href="resume.html">Resumé</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main class="projectsPage">
+            <h1>My Projects</h1>
+            <p class="page__hover">(Hover Over and Click The Images)</p>
+            <div class="allChallenges">
+                <a href="./htmlChal.html"><div class="htmlChal">
+                    <div class="chal--text">
+                        <h2>HTML Challenges</h2>
+                        <p>Click this to link you to some of my HTML Challenges while I was first learning about HTML.</p>
+                    </div>
+                </div></a>
+                
+                <a href="./cssChal.html"><div class="cssChal">
+                    <div class="chal--text">
+                        <h2>CSS Challenges</h2>
+                        <p>Click this to link you to some of my CSS Challenges while I was first learning about CSS.</p>
+                    </div>
+                </div></a>
+
+                <a href="./apiChal.html"><div class="apiChal">
+                    <div class="chal--text">
+                        <h2>AJAX API Challenges</h2>
+                        <p>Click this to link you to some of my AJAX API Challenges while I was first learning about APIs.</p>
+                    </div>
+                </div></a>
+
+                <a target="_ " href="https://dduliepre3.github.io/midtermsketch/"><div class="midTermSketch">
+                    <div class="chal--text">
+                        <h2>MidTerm Sketch Replica</h2>
+                        <p>Click this to link you to a site that was made based off of a sketch file that I had to replicate.</p>
+                    </div>
+                </div></a>
+
+                <!-- 1. AJAX API (edited)
+                2. NODE API
+                3. React Guessing Game
+                4. First CSS section of challenges
+                5. HTML Challenges
+                6. eCommerce (edited) 
+                7. Sketch Files -->
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer_copy">
+                <p><small>&copy; Copyright. Information on this site is for educational purposes only.</small></p>
+            </div>
+            <div class="footer__images">
+                <a target="_ " href="https://www.instagram.com/nicky_dominick/"><img src="Images/Instagram.png" alt="instagram" class="footer"></a>
+                <a target="_ " href="https://www.linkedin.com/in/dominick-duliepre-06b028168/"><img src="Images/LinkedIn.png" alt="LinkedIn" class="footer"></a>
+                <a target="_ " href="http://road2hire.org/"><img src="Images/R2H.jpg" alt="road2hire" class="footer"></a>
+            </div>
+        </footer>
+            
+        <script src="form.js"></script>
+    </body>
+</html>

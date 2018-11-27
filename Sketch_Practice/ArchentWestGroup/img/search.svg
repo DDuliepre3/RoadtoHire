@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="17px" viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>search</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Welcome" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="architecture-website-concept" transform="translate(-1305.000000, -230.000000)" fill="#242E2D">
+            <g id="header" transform="translate(280.000000, 224.000000)">
+                <g id="search" transform="translate(964.000000, 4.000000)">
+                    <g transform="translate(62.000000, 2.000000)">
+                        <path d="M9.14285714,13.9090909 C5.35576172,13.9090909 2.28571429,10.7954349 2.28571429,6.95454545 C2.28571429,3.11365606 5.35576172,0 9.14285714,0 C12.9299526,0 16,3.11365606 16,6.95454545 C16,10.7954349 12.9299526,13.9090909 9.14285714,13.9090909 Z M9.14285714,11.5909091 C11.6675874,11.5909091 13.7142857,9.51513839 13.7142857,6.95454545 C13.7142857,4.39395252 11.6675874,2.31818182 9.14285714,2.31818182 C6.61812686,2.31818182 4.57142857,4.39395252 4.57142857,6.95454545 C4.57142857,9.51513839 6.61812686,11.5909091 9.14285714,11.5909091 Z" id="Oval-2"></path>
+                        <rect id="Rectangle-5" transform="translate(3.159199, 13.136364) rotate(-45.000000) translate(-3.159199, -13.136364) " x="-0.650324939" y="11.9772727" width="7.61904762" height="2.31818182"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

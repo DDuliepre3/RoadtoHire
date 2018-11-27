@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Medium AJAX</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+
+    <body>
+        <h1>Finding Weather Conditions</h1>
+        <form class="cityForm">
+            Type in a City located in the US: <input type="text" name="userInput"><br>
+            <input type="submit" value="Submit">
+        </form>
+        <div class="output"></div>
+        <div class="userOutput"></div> 
+        <script>
+            // MEDIUM: Using a weather API, fetch and display weather for Charlotte to a webpage that you create.
+            //         You should display at a minimum the current temperature and sky conditions.
+            //         This API: https://openweathermap.org/current is free. It just requires an account be created.
+            //         You can browse other weather APIs if you would like to use something else.
+    
+            // MEDIUM PT. 2: Add an input field and button on your page that let's the user enter a city and update the weather to the city of their choosing. Handle errors if a user enters bad input.
+            
+            // var url = `http://api.openweathermap.org/data/2.5/weather?q=${char},us&units=imperial&appid=703d9a6a73ec4d2c6b5553464e8f3ec9`;
+
+            // var char = "Charlotte";
+            // console.log(url);
+            // document.querySelector(".output").innerHTML += `<p>The Current Temperature in ${char} is ${data.main.temp}. ${char}'s sky conditions are looking like a humidity of ${data.main.humid} and clouds described as ${data.weather[0].description}.</p>`;
+
+            document.querySelector(".cityForm").addEventListener('submit', function(event){
+                event.preventDefault();
+                var city = event.target.children[0].value;
+                var url = `http://api.openweathermap.org/data/2.5/weather?q=${city},us&units=imperial&appid=703d9a6a73ec4d2c6b5553464e8f3ec9`;
+
+                fetch(url).then(
+                    function(response){
+                        return response.json();
+                        // return data;
+                        // console.log(data);
+                    }).then(function(data) {
+                        var temp = data.main.temp;
+                        var humid = data.main.humidity;
+                        var condition = data.weather[0].description;
+                        // document.querySelector(".userOutput").innerHTML = temp + " " + humid;
+                        document.querySelector(".output").innerHTML += `<p>${city}'s weather condition has a humidity of ${humid}% and can be described as ${condition}. The Current Temperature in ${city} is ${temp}.</p>`;
+                    })
+                
+                
+                // document.querySelector('.userOutput').innerHTML = returned;
+                console.log(event.target.children[0].value);
+                console.log('submit');
+            });
+
+        </script>
+    </body>
+</html>

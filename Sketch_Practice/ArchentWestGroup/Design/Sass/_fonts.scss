@@ -1,0 +1,29 @@
+@font-face{
+    font-family: 'Audimat';
+    src: url('../../fonts/AUdimat-Italic.ttf') format('truetype'); // format('opentype' || 'truetype')
+    // font-weight
+}
+
+@font-face{
+    font-family: 'DBeyond';
+    src: url('../../fonts/DPSDbeyond.otf') format('opentype'); // format('opentype' || 'truetype')
+    // font-weight
+}
+
+@font-face{
+    font-family: 'SansBold';
+    src: url('../../fonts/SourceSansPro-Bold.ttf') format('truetype'); // format('opentype' || 'truetype')
+    font-weight:800;
+}
+
+@font-face{
+    font-family: 'SansLight';
+    src: url('../../fonts/SourceSansPro-Light.ttf') format('truetype'); // format('opentype' || 'truetype')
+    // font-weight
+}
+
+@font-face{
+    font-family: 'SansReg';
+    src: url('../../fonts/SourceSansPro-Regular.ttf') format('truetype'); // format('opentype' || 'truetype')
+    // font-weight
+}
